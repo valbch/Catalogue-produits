@@ -281,14 +281,8 @@ app.post("/product/delete", async (req, res) => {
     return res.status(400).json({ error: error.message });
   }
 });
-// - Attribut
-// * title (texte)
-// * description (texte)
-// * price (nombre)
-// * category (référence vers Category)
 
 // Démarrer le serveur
 
-app.listen(port, () => {
-  console.log("C'est parti sur le port : " + port + " !!");
-});
+app.listen(process.env.PORT || 3000);
+console.log("C'est parti sur le port : " + port + " !!");
